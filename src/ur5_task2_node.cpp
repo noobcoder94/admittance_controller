@@ -107,11 +107,7 @@ int main(int argc, char **argv)
 	KDL::ChainIkSolverVel_pinv vel_ik_solver(ur5_chain, 0.0001, 1000);
 	KDL::ChainIkSolverPos_NR ik_solver(ur5_chain, fk_solver, vel_ik_solver, 1000);
 
-	
-	/*for(int i=0; i< 2; i++) {
-		ros::spinOnce();
-	 	loop_rate.sleep();
-	}*/
+
 
 	const float t_step = 0.01;
 	int count = 0;

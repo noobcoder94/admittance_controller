@@ -1,0 +1,16 @@
+<launch>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" >
+    <arg name="paused" value="true" />
+  </include>
+
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-file $(find admittance_controller)/urdf/ur5_jnt_pos_ctrl.urdf -urdf -x 0 -y 0 -z 0.1 -model ur5 -J shoulder_lift_joint 0.07 -J elbow_joint 1.0" />
+
+  
+
+  <include file="$(find admittance_controller)/launch/ur5_joint_position_control.launch" />
+
+  
+
+
+</launch>
